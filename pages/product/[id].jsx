@@ -110,8 +110,8 @@ const Product = ({ burger, list }) => {
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
         <meta charSet='utf-8' />
       </Head>
-      <div className="flex-[2] h-[70%] flex items-center justify-center pt-6 w-[300px]">
-        <div className="w-[60%] min-h-[170px] h-fit max-w-[500px] max-h-[500px] relative">
+      <div className="flex-[2] h-[70%] flex items-center justify-center lg:pt-6 w-[300px]">
+        <div className="w-[60%] min-w-[250px] min-h-[170px] md:min-h-[250px] h-fit max-w-[500px] max-h-[500px] relative">
           <Image src={burger.img} layout='fill'  alt=""  />
         </div>
       </div>
