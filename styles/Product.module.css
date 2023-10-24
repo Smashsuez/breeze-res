@@ -13,10 +13,6 @@
     display: none;
 }
 
-.desc{
-    color:#1f285c
-}
-
 
 .left{
     flex:2;
@@ -57,41 +53,12 @@
     margin-bottom:30px;
 }
 
-.chooseSize{
-    margin-top: 0px;
-    background-color:#d1411e;
-    border-radius: 6px;
-    width:300px;
-    color:aliceblue;
-    height:fit-content;
-    padding:25px 20px ;
-    display:inline-block;
-    padding: 25px 10px;
-}
-
-.choose{
-    text-align:center;
-}
-
-.sizesOption{
-    padding-left: 25px;
-}
-
-.size{
-    cursor: pointer;
-    color:aliceblue;
-    font-weight:bold;
-}
 
 
-.number{
-    font-family: 'Nunito Sans', sans-serif;
-}
 
-.box{
-    display:flex;
-    
-}
+
+
+
 
 .Extrabox{
     margin-left: 20px;
