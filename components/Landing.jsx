@@ -18,11 +18,11 @@ const Landing = () => {
         <>
             <div className="min-h-[100vh] h-fit flex-row flex items-center justify-between flex-wrap">
 
-                <div className='flex flex-col-reverse w-full flex-wrap pt-10 lg:pt-0 justify-between min-h-[70vh]  lg:flex-row  lg:items-center lg:justify-between lg:flex-wrap'>
-                    <div className="px-10 md:px-20 ">
+                {/* <div className='flex flex-col-reverse w-full flex-wrap pt-10 lg:pt-0 justify-between min-h-[70vh]  lg:flex-row  lg:items-center lg:justify-between lg:flex-wrap'>
+                    <div className="px-10 md:px-20 "> */}
 
-                {/* <div className='flex flex-col-reverse w-full md:w-fit pt-10 lg:pt-0 justify-between min-h-[70vh]  md:flex-row  md:items-center lg:justify-between flex-wrap'>
-                    <div className="px-10 md:px-20 md:w-[40%] w-fit"> */}
+                <div className='flex flex-col-reverse w-full md:w-fit pt-10 lg:pt-0 justify-between min-h-[70vh]  md:flex-row  md:items-center lg:justify-between flex-wrap'>
+                    <div className="px-10 md:px-20 md:w-[40%] w-fit">
 
                     <div className='text-[25px] md:text-[30px] font-bold font-varela'>
                         <h1 className="text-blue-900 min-h-[143px] md:h-fit"><span className='text-[#059669] text-[45px]'>B</span>reeze BURGER,
