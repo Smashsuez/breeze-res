@@ -118,7 +118,7 @@ const Product = ({ burger, list }) => {
       <div className="flex-[3] pt-[70px] pb-5">
         <h1 className="text-[30px] md:text-[40px]  text-blue-900 font-varela"> {size.text} {burger.title}</h1>
         <span className="text-gray-400 font-varela">{burger.desc}</span>
-        <div className="text-blue-900 font-varela text-lg">Price: {price} £</div>
+        <div className="text-blue-900 font-varela text-xl mt-5 font-bold">Price: {price} <span className='text-green-600'>£</span></div>
         <div className="text-blue-900 mt-7 w-full">
           <h3 className="w-full text-[25px] font-bold">Choose the size</h3>
           
@@ -127,7 +127,7 @@ const Product = ({ burger, list }) => {
               <div className="flex w-fit cursor-pointer" key={size._id}>
                 <div className="w-fit" onClick={() => handleSize(index)}>
                   <div className={`flex flex-wrap gap-3 px-2 py-1 border-2 ${price === size.price ? "border-green-600"  : "border-gray-300 "} rounded-lg items-center justify-between`}>
-                    <div className='mr-4'>{size.text}  </div> <div className=""> £ {size.price}</div>
+                    <div className='mr-4'>{size.text}</div> <div className="">{size.price} £</div>
                   </div>
                 </div> 
               </div>
