@@ -187,8 +187,8 @@ export const getServerSideProps = async ({params}, ctx) =>{
   //                   admin = true;
   //                 }
 
-    const product = await axios.get(`https://breeze-res/api/products/${params.id}`);
-    const menu = await axios.get("https://breeze-res/api/products");
+    const product = await axios.get(`https://breeze-res.vercel.app/api/products/${params.id}`);
+    const menu = await axios.get("https://breeze-res.vercel.app/api/products");
     return{
       props:{
         burger: product.data,

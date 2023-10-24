@@ -54,7 +54,7 @@ export const getServerSideProps = async (ctx) => {
 
 
 
-  const res = await axios.get("https://breeze-res/api/products");
+  const res = await axios.get("https://breeze-res.vercel.app/api/products");
   return{
     props:{
       list: res.data,
