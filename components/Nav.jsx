@@ -5,7 +5,7 @@ import UseReadingProgress from '@/hooks/UseReadingProgresslatest';
 import { useSelector } from 'react-redux';
 import Image from 'next/image';
 
-const Nav = () => {
+const Nav = ({list, admin}) => {
     const [openMenu, setOpenMenu] = useState(false)
     const quantity = useSelector((state) => state.cart.quantity);
     const completion = UseReadingProgress()
@@ -84,7 +84,7 @@ const Nav = () => {
                 </div>
                 </Link>
                 
-            
+            {admin && <div>opp</div>}
 
 <div className='md:hidden' onClick={toggleMenu}>
     {!openMenu && <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 cursor-pointer md:hidden">
@@ -106,3 +106,5 @@ const Nav = () => {
 }
 
 export default Nav
+
+  

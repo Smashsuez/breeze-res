@@ -31,9 +31,9 @@ export default function Home({list, admin}) {
       </Head>
       <Landing />
       {/* <Powered/> */}
-      {/* {admin && <AddButton setClose={setClose}/> } */}
+      {admin && <AddButton setClose={setClose}/> }
       <List list={list} />
-      {/* {!close && <Add setClose={setClose}/> } */}
+      {!close && <Add setClose={setClose}/> }
       <Location />
       <Reviews/>
       {/* <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

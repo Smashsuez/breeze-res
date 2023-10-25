@@ -13,7 +13,6 @@ const UseReadingProgress = () => {
                 setCompletion(
                     Number((currentProgress / scrollHeight).toFixed(5)) * 100
                 )
-                console.log(completion)
             }
         }
 

@@ -56,10 +56,10 @@ const Add = ({setClose}) => {
     
 
   return (
-    <div className={styles.container}>
+    <div className="bg-blue-900/50 pt-10 fixed h-[100vh] w-[100vw] top-0 right-0 left-0 flex justify-center items-center z-[52]">
         <div className={styles.wrapper}>
-            <span onClick={()=>setClose(true)} className={styles.close}>X</span>
-            <h1 >Add New Product</h1>
+            <span onClick={()=>setClose(true)} className="w-6 h-6 absolute top-[-12px] right-[-10px] flex justify-center items-center text-white rounded-full bg-blue-900 cursor-pointer">X</span>
+            <h2 className="font-capriola text-[30px] text-blue-900 text-center">NEW <p className="text-green-600 inline">PRODUCT</p></h2>
             <div className={styles.item}>
                 <label className={styles.label}>Choose an image</label>
                 <input type="file" onChange={(e) => setFile(e.target.files[0])} />
@@ -67,7 +67,7 @@ const Add = ({setClose}) => {
             <div className={styles.item}>
           <label className={styles.label}>Title</label>
           <input
-            className={styles.input}
+            className="border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
             type="text"
             onChange={(e) => setTitle(e.target.value)}
           />
@@ -75,7 +75,7 @@ const Add = ({setClose}) => {
         <div className={styles.item}>
           <label className={styles.label}>Desc</label>
           <textarea
-          className={styles.input}
+          className="border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
             rows={4}
             type="text"
             onChange={(e) => setDesc(e.target.value)}
@@ -85,20 +85,20 @@ const Add = ({setClose}) => {
           <label className={styles.label}>size</label>
           <div className={styles.size}>
             <input
-              className={`${styles.input} ${styles.inputSm}`}
+              className={`border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 ${styles.inputSm}`}
               type="text"
               placeholder="Item"
               name="text"
               onChange={handleSizeInput}
             />
             <input
-              className={`${styles.input} ${styles.inputSm}`}
+              className="w-28 border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
               type="number"
               placeholder="Price"
               name="price"
               onChange={handleSizeInput}
             />
-            <button className={styles.addButton} onClick={handleSize}>
+            <button className="bg-blue-900 text-white px-3 py-2 h-fit rounded-md w-[100px]" onClick={handleSize}>
               Add
             </button>
           </div>
@@ -114,20 +114,20 @@ const Add = ({setClose}) => {
           <label className={styles.label}>Extra</label>
           <div className={styles.extra}>
             <input
-              className={`${styles.input} ${styles.inputSm}`}
+              className="w-28 border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
               type="text"
               placeholder="Item"
               name="text"
               onChange={handleExtraInput}
             />
             <input
-              className={`${styles.input} ${styles.inputSm}`}
+              className="w-28 border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
               type="number"
               placeholder="Price"
               name="price"
               onChange={handleExtraInput}
             />
-            <button className={styles.addButton} onClick={handleExtra}>
+            <button className="bg-blue-900 text-white px-3 py-2 h-fit rounded-md w-[100px]" onClick={handleExtra}>
               Add
             </button>
           </div>
@@ -139,7 +139,7 @@ const Add = ({setClose}) => {
             ))}
           </div>
         </div>
-        <button className={styles.addButton} onClick={handleCreate} >
+        <button className="bg-green-600 text-white px-3 py-2 h-fit rounded-md w-[100px]" onClick={handleCreate} >
           Create
         </button> 
         </div>

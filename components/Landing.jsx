@@ -40,9 +40,12 @@ const Landing = () => {
                             Come in and try one today!
                         </p>
                     </div>
-                    <div className='px-3 py-1 mt-6 bg-green-600 w-fit text-white rounded-md hover:bg-white hover:text-green-500 hover:border-2 hover:border-green-600 duration-1000 cursor-pointer hover:outline-none'>
-                        Menu
-                    </div>
+                    <Link href={"/#menu"}>
+                        <div className='px-3 py-1 mt-6 bg-green-600 w-fit text-white rounded-md hover:bg-white hover:text-green-500 hover:border-2 hover:border-green-600 duration-1000 cursor-pointer hover:outline-none'>
+                            Menu
+                        </div>
+                    </Link>
+                   
                 </div>
                 <div className="w-screen flex justify-center md:w-fit ">
                     <div className="w-[60vw] max-w-[600px] lg:w-[600px] px-100 ">

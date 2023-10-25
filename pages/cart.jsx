@@ -48,7 +48,7 @@ const Cart = () =>{
         <meta charSet='utf-8' />
       </Head>
       <div className=" overflow-auto scrollbar">
-        <table className="basic">
+        {!!cart?.products?.length   && <table className="basic ">
           <thead className=''>
             <tr className="">
               <th>Product</th>
@@ -100,11 +100,12 @@ const Cart = () =>{
               </tr>
             ))}
           </tbody>
-        </table>
+        </table>}
       </div>
-      <div className="mt-16 text-blue-900  ">
-        <div className="bg-white min-w-[230px] max-w-[400px] rounded-md py-5 px-3 h-[180px] flex flex-col justify-evenly">
-          <h2 className="font-capriola text-[30px] text-blue-900 text-center">CART TOTAL</h2>
+      <div className="mt-16 text-blue-900 w-[100vw] pr-10 flex justify-center ">
+        <div className="bg-white min-w-[230px] w-[70vw]  max-w-[400px] rounded-md py-5 px-3 h-[180px] flex flex-col justify-evenly">
+          {!!cart?.products?.length ? <> 
+            <h2 className="font-capriola text-[30px] text-blue-900 text-center">CART TOTAL</h2>
           <div className="text-lg font-bold">
             <b className="font-capriola">Total: </b>{cart.total} £ 
           </div>
@@ -119,11 +120,13 @@ const Cart = () =>{
               </button>
                 </div>
               }
+          </> : <h2 className="font-capriola text-[30px] text-blue-900 text-center">Empty cart</h2>}
+          
                 </div>
               </div>
       
               {cash && <OrderDetail total={cart.total} setCash={setCash} createOrder={createOrder} quantity={cart.products.map((product) => (product.quantity))} extra={cart.products.map((product) => (product.extras.map((extra) => (
-                     extra.text
+                      extra.text
                     ))))} title={cart.products.map((product) => (product.title))} size={cart.products.map((product) => (product.size.text))} />}
 
 
