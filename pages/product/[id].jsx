@@ -126,7 +126,7 @@ const Product = ({ burger, list }) => {
             {burger.sizesOption.map((size, index) => (
               <div className="flex w-fit cursor-pointer" key={size._id}>
                 <div className="w-fit" onClick={() => handleSize(index)}>
-                  <div className={`flex flex-wrap gap-3 px-2 py-1 border-2 ${price === size.price ? "border-green-600"  : "border-gray-300 "} rounded-lg items-center justify-between`}>
+                  <div className={`flex flex-wrap gap-3 px-2 py-1 border-2 ${price === title ? "border-green-600"  : "border-gray-300 "} rounded-lg items-center justify-between`}>
                     <div className='mr-4'>{size.text}</div> <div className="">{size.price} £</div>
                   </div>
                 </div> 

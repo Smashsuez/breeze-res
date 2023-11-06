@@ -32,14 +32,11 @@ const Footer = () => {
       {team && 
         <div className='bg-blue-900/50 fixed h-[100vh] w-[100vw] top-0 right-0 left-0 flex justify-center items-center'>
           <div className="flex flex-col gap-3 relative bg-white p-3 pt-9 w-[90vw] md:w-[65vw] min-w-[250px] h-fit min-h-[450px] max-w-[400px] rounded-lg">
-            <span onClick={()=>setCash(false)} className="w-6 h-6 absolute top-[-12px] right-[-10px] flex justify-center items-center text-white rounded-full bg-blue-900 cursor-pointer">X</span>
+            <span onClick={()=>setTeam(false)} className="w-6 h-6 absolute top-[-12px] right-[-10px] flex justify-center items-center text-white rounded-full bg-blue-900 cursor-pointer">X</span>
             <h2 className="font-capriola text-[30px] text-blue-900 text-center">TEAM <p className="text-green-600 inline">MEMBER</p></h2>
             <div className='flex flex-col'>
-              1) Mohamed Ahmed Gameel
-              2) Ahmed Yasser Mahmoud
-              3) Karim Mohamed 
-              4) Ahmed Mohamed Ibrahem
-              5) Omar Wael
+              <span>1) Mohamed Ahmed Gameel</span>
+              <span>1) Mohamed Ahmed Gameel</span> <span>1) Mohamed Ahmed Gameel</span> <span>1) Mohamed Ahmed Gameel</span>
             </div>
           </div>
         </div>
