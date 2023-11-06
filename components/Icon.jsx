@@ -7,13 +7,13 @@ const Icon = () => {
   return (
     <>
     <div className='flex w-[100px] mt-5 justify-between'>
-    <a href="https://m.facebook.com/attackpaintball.suez">
+    <a href="#">
     <FontAwesomeIcon icon={faFacebook}   className='w-6 h-6 text-blue-900'/>
     </a>
-    <a href="https://instagram.com/smash.suez?igshid=YmMyMTA2M2Y=">
+    <a href="#">
     <FontAwesomeIcon icon={faInstagram} className='w-6 h-6 text-blue-900'/>
     </a>
-    <a href="https://wa.me/201020027359">
+    <a href="#">
     <FontAwesomeIcon icon={faWhatsapp}  className='w-6 h-6 text-blue-900'/>
     </a>
     
