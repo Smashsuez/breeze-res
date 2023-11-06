@@ -9,7 +9,7 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    user-select: none;
+    pointer-events: none;
 }
 
 html{
