@@ -1,6 +1,7 @@
 
 import Image from "next/image";
 import axios from "axios";
+import Head from 'next/head'
 
 
 const Order = ({ order }) => {
