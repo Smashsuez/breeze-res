@@ -55,8 +55,8 @@ const Add = ({setClose}) => {
     
 
   return (
-    <div className="bg-blue-900/50 pt-10 fixed h-[100vh] w-[100vw] top-0 right-0 left-0 flex justify-center items-center z-[52]">
-        <div className='bg-white py-4 px-4 rounded-lg flex flex-col gap-2 w-[90vw] md:w-[65vw] min-w-[250px] relative'>
+    <div className="bg-blue-900/50 fixed h-[100vh] w-[100vw] top-0 right-0 left-0 flex justify-center items-center z-[52]">
+        <div className='bg-white py-4 px-4 rounded-lg flex flex-col gap-2 w-[90vw] md:w-[65vw] min-w-[250px] max-w-[400px] relative'>
             <span onClick={()=>setClose(true)} className="w-6 h-6 absolute top-[-12px] right-[-10px] flex justify-center items-center text-white rounded-full bg-blue-900 cursor-pointer">X</span>
             <h2 className="font-capriola text-[30px] text-blue-900 text-center">NEW <p className="text-green-600 inline">PRODUCT</p></h2>
             <div className='flex flex-col'>
