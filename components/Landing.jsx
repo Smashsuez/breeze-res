@@ -1,8 +1,6 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
-import styles from "../styles/Landing.module.css";
 import Image from 'next/image';
-import Icon from './Icon';
 import 'animate.css';
 
 import ReactPlayer from 'react-player';

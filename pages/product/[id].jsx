@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/legacy/image'; // changed 'next/legacy/image' to 'next/image'
-import styles from '../../styles/Product.module.css';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '@/redux/cartSlicelatest';
 import Head from 'next/head'
 import Link from 'next/link';
-import Powered from '@/components/Poweredlatest';
 import List from '@/components/Listlatest';
 
 
@@ -138,7 +136,7 @@ const Product = ({ burger, list }) => {
                 <h3 className="w-full text-[25px] font-bold">Extra</h3>
                 <div className=" border-2 border-gray-300 rounded-lg px-4 py-2 max-w-[300px]">
                 {burger.extraOptions.map((option) => (
-              <div className={styles.option} key={option._id}>
+              <div key={option._id}>
                 <input type="checkbox"
                   id={option.text}
                   name={option.text}

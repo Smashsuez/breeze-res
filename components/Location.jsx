@@ -1,14 +1,13 @@
 import React from 'react'
-import styles from "../styles/Location.module.css"
 
 const Location = () => {
   return (
     <div className="bg-white" id='location'>
-       <div className="w-screen text-center pt-10">
+       <div className="w-[100%] text-center pt-10">
           <span className="font-capriola text-[30px] text-blue-900">Our  <span className='text-green-600'>Location</span></span>
         </div>
         <div className="py-10 px-4 flex flex-wrap gap-6 md:gap-20 justify-evenly flex-col-reverse md:flex-row">
-        <div className={styles.map} 
+        <div className='border-4 rounded-xl border-blue-900 overflow-hidden w-450px max-w-[90vw] self-center'
         data-aos="flip-left"
       data-aos-easing="ease-out-cubic"
       data-aos-duration="2000">

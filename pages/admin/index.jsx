@@ -3,7 +3,6 @@ import Image from "next/legacy/image";
 import { useState, useEffect } from "react";
 import Head from 'next/head'
 
-import styles from "../../styles/admin.module.css";
 
 const Index = ({ orders, products }) => {
 
@@ -71,19 +70,19 @@ const Index = ({ orders, products }) => {
           <tbody>
             {productsList.map((product) => (
               <tr key={product._id} className="">
-                <td className={styles.td}>
+                <td>
                   <Image src={product.img} alt="" width={50} height={50} />
                 </td>
                 <td className="text-gray-600">{product.desc}</td>
-                <td className={styles.td}>{product.title}</td>
-                <td className={styles.td}>
+                <td >{product.title}</td>
+                <td >
                   {product.sizesOption.map((size) => (
                     <span key={size._id}>
                       {size.text} ({size.price}){" "}
                     </span>
                   ))}
                 </td>
-                <td className={styles.td}> 
+                <td > 
                   <button className="bg-red-700 text-white px-2 py-1 rounded-md" onClick={() => handleDeleteProducts(product._id)}>Delete</button>
                 </td>
               </tr>

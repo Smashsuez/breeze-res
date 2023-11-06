@@ -1,5 +1,4 @@
 import React, { children } from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
 import Nav from './Nav'
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from '../styles/Cart.module.css';
 import Image from 'next/legacy/image';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeProduct, updateCart, reset } from '../redux/cartSlice';
@@ -7,7 +6,6 @@ import axios from 'axios';
 import { useRouter } from "next/router";
 import OrderDetail from "../components/OrderDetail";
 import Head from 'next/head'
-import Powered from '@/components/Poweredlatest';
 
 
 const Cart = () =>{
@@ -110,7 +108,7 @@ const Cart = () =>{
             <b className="font-capriola">Total: </b>{cart.total} £ 
           </div>
           {open &&
-            <div className={styles.paymentMethods}>
+            <div>
               <button
                 className="text-white bg-blue-900 rounded-md w-fit px-4 py-1"
                 style={{ width: "100%" }}
