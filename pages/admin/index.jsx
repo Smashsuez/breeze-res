@@ -91,29 +91,28 @@ const Index = ({ orders, products }) => {
           </tbody>
         </table>
       </div>
-      <div className={styles.item}>
-        <h1 className={styles.title}>Orders</h1>
-        <table className={`${styles.table} ${styles["orders-table"]}`}>
-          <thead className={styles.head}>
-            <tr className={styles.trTitle}>
-              <th>Id</th>
-              <th>Customer</th>
-              <th>Address</th>
-              <th>Phone</th>
-              <th>Item</th>
+
+      <div className="overflow-auto scrollbar">
+      <h2 className="font-capriola text-[30px] text-blue-900 text-center">ORDER</h2>
+        <table className="basic min-w-[500px]">
+          <thead >
+            <tr >
+              <th className="min-w-[150px]">Customer</th>
+              <th className="min-w-[150px]">Address</th>
+              <th className="min-w-[150px]">Phone</th>
+              <th className="min-w-[150px]">Item</th>
               <th>Quantity</th>
               <th>Extras</th>
               <th>Total</th>
               <th>Action</th>
             </tr>
           </thead>
-          <tbody className={styles.tbody}>
+          <tbody >
             {ordersList.map((order) => (
-              <tr key={order._id} className={styles.tr}>
-                <td><span className={styles.id}>{order._id.slice(0, 5)}..</span></td>
-                <td><span className={styles.name}>{order.customer}</span></td>
-                <td><span className={styles.address}>{order.address}</span></td>
-                <td><span className={styles.address}>0{order.phone}</span></td>
+              <tr key={order._id} >
+                <td><span >{order.customer}</span></td>
+                <td><span >{order.address}</span></td>
+                <td><span >0{order.phone}</span></td>
                 <td>
                   {order.title.map((title, index) => (
                     <div key={index}>({order.size[index]}) {title} </div>
@@ -129,9 +128,9 @@ const Index = ({ orders, products }) => {
                     <div key={index}>{extra}</div>
                   ))}
                 </td>
-                <td><span className={styles.total}>£ {order.total}</span></td>
+                <td><span>£ {order.total}</span></td>
                 <td>
-                  <button className={styles.button} onClick={() => handleDeleteOrders(order._id)}>Delete</button>
+                  <button className="bg-red-700 text-white px-2 py-1 rounded-md"onClick={() => handleDeleteOrders(order._id)}>Delete</button>
                 </td>
               </tr>
             ))}
@@ -145,7 +144,7 @@ const Index = ({ orders, products }) => {
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
 
-  if (myCookie.token !== process.env.TOKEN) {
+  if (myCookie.token == process.env.TOKEN) {
     return {
       redirect: {
         destination: "/admin/login",
