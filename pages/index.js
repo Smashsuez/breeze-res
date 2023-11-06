@@ -46,7 +46,7 @@ export default function Home({list, admin}) {
 
 export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || "";
-  let admin = false;
+  let admin = true;
 
   if (myCookie.token === process.env.TOKEN) {
     admin = true;
