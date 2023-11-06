@@ -28,13 +28,13 @@ const Product = ({ burger, list }) => {
   const [name, setName] = useState("");
   const [extras, setExtras] = useState([]);
   const dispatch = useDispatch();
-  const [size, setSize] = useState(burger.sizesOption[0]);
-
+  const [CurrentSize, setCurrentSize] = useState(burger.sizesOption[0]);
+  
 
   
   const handleSize = (Index) => {
     const selectedSize = burger.sizesOption[Index];
-    setSize(selectedSize);
+    setCurrentSize(selectedSize);
     setPrice(selectedSize.price + extras.reduce((total, extra) => total + extra.price, 0));
   };
   ;
@@ -92,7 +92,7 @@ const Product = ({ burger, list }) => {
  
 
   const handleClick = () => {
-    dispatch(addProduct({ ...burger, extras, price, quantity, size }));
+    dispatch(addProduct({ ...burger, extras, price, quantity, size : CurrentSize }));
     setShowPopup(true);
     setTimeout(() => setShowPopup(false), 3000); // hide the pop-up after 3 seconds
   };
@@ -116,7 +116,7 @@ const Product = ({ burger, list }) => {
         </div>
       </div>
       <div className="flex-[3] pt-[70px] pb-5">
-        <h1 className="text-[30px] md:text-[40px]  text-blue-900 font-varela"> {size.text} {burger.title}</h1>
+        <h1 className="text-[30px] md:text-[40px]  text-blue-900 font-varela"> {CurrentSize.text} {burger.title}</h1>
         <span className="text-gray-400 font-varela">{burger.desc}</span>
         <div className="text-blue-900 font-varela text-xl mt-5 font-bold">Price: {price} <span className='text-green-600'>£</span></div>
         <div className="text-blue-900 mt-7 w-full">
@@ -126,7 +126,7 @@ const Product = ({ burger, list }) => {
             {burger.sizesOption.map((size, index) => (
               <div className="flex w-fit cursor-pointer" key={size._id}>
                 <div className="w-fit" onClick={() => handleSize(index)}>
-                  <div className={`flex flex-wrap gap-3 px-2 py-1 border-2 ${price === title ? "border-green-600"  : "border-gray-300 "} rounded-lg items-center justify-between`}>
+                  <div className={`flex flex-wrap gap-3 px-2 py-1 border-2 ${size.text === CurrentSize.text ? "border-green-600"  : "border-gray-300 "} rounded-lg items-center justify-between`}>
                     <div className='mr-4'>{size.text}</div> <div className="">{size.price} £</div>
                   </div>
                 </div> 
