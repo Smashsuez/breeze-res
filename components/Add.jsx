@@ -56,7 +56,7 @@ const Add = ({setClose}) => {
 
   return (
     <div className="bg-blue-900/50 pt-10 fixed h-[100vh] w-[100vw] top-0 right-0 left-0 flex justify-center items-center z-[52]">
-        <div className='bg-white py-4 px-4 rounded-lg flex flex-col gap-2'>
+        <div className='bg-white py-4 px-4 rounded-lg flex flex-col gap-2 w-[90vw] md:w-[65vw] min-w-[250px] relative'>
             <span onClick={()=>setClose(true)} className="w-6 h-6 absolute top-[-12px] right-[-10px] flex justify-center items-center text-white rounded-full bg-blue-900 cursor-pointer">X</span>
             <h2 className="font-capriola text-[30px] text-blue-900 text-center">NEW <p className="text-green-600 inline">PRODUCT</p></h2>
             <div className='flex flex-col'>
@@ -84,20 +84,20 @@ const Add = ({setClose}) => {
           <label >size</label>
           <div  className='flex gap-4'>
             <input
-              className={`w-28 border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 `}
+              className={`w-[35%] border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600 `}
               type="text"
               placeholder="Item"
               name="text"
               onChange={handleSizeInput}
             />
             <input
-              className="w-28 border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
+              className="w-[35%] border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
               type="number"
               placeholder="Price"
               name="price"
               onChange={handleSizeInput}
             />
-            <button className="bg-blue-900 text-white px-3 py-2 h-fit rounded-md w-[100px]" onClick={handleSize}>
+            <button className="bg-blue-900 text-white px-3 py-2 h-fit rounded-md " onClick={handleSize}>
               Add
             </button>
           </div>
@@ -113,20 +113,20 @@ const Add = ({setClose}) => {
           <label >Extra</label>
           <div className='flex gap-4'>
             <input
-              className="w-28 border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
+              className="w-[35%] border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
               type="text"
               placeholder="Item"
               name="text"
               onChange={handleExtraInput}
             />
             <input
-              className="w-28 border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
+              className="w-[35%] border-2 border-green-600 px-3 py-2 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600"
               type="number"
               placeholder="Price"
               name="price"
               onChange={handleExtraInput}
             />
-            <button className="bg-blue-900 text-white px-3 py-2 h-fit rounded-md w-[100px]" onClick={handleExtra}>
+            <button className="bg-blue-900 text-white px-3 py-2 h-fit rounded-md fit" onClick={handleExtra}>
               Add
             </button>
           </div>
