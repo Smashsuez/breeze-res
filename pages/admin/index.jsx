@@ -92,7 +92,7 @@ const Index = ({ orders, products }) => {
         </table>
       </div>
 
-      <div className="overflow-auto scrollbar">
+      <div className="overflow-auto scrollbar mt-10">
       <h2 className="font-capriola text-[30px] text-blue-900 text-center">ORDER</h2>
         <table className="basic min-w-[500px]">
           <thead >
@@ -128,7 +128,7 @@ const Index = ({ orders, products }) => {
                     <div key={index}>{extra}</div>
                   ))}
                 </td>
-                <td><span>£ {order.total}</span></td>
+                <td><span>{order.total} £</span></td>
                 <td>
                   <button className="bg-red-700 text-white px-2 py-1 rounded-md"onClick={() => handleDeleteOrders(order._id)}>Delete</button>
                 </td>
