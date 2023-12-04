@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <button
-          onClick={() => setTeam(true)}
+          onClick={() => setTeam(false)}
           className="font-capriola text-lg w-[100vw] h-fit text-center flex items-center justify-center"
         >
           Powered By{" "}
