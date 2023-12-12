@@ -22,7 +22,6 @@ const Cart = () =>{
       if (res.status === 201) {
         dispatch(reset());
         router.push(`/orders/${res.data._id}`);
-        console.log(data)
       }
     } catch (err) {
       console.log(err);
