@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="bg-blue-900/50 fixed h-[100vh] w-[100vw] top-0 right-0 left-0 flex justify-center items-center">
             <div className="flex flex-col gap-3 relative bg-white p-3 pt-9 w-[90vw] md:w-[65vw] min-w-[250px] h-fit min-h-[450px] max-w-[400px] rounded-lg">
               <span
-                onClick={() => setTeam(false)}
+                onClick={() => setTeam(true)}
                 className="w-6 h-6 absolute top-[-12px] right-[-10px] flex justify-center items-center text-white rounded-full bg-blue-900 cursor-pointer"
               >
                 X
