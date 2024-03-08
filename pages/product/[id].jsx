@@ -178,6 +178,7 @@ const Product = ({ burger, list }) => {
                   
                 
 export const getServerSideProps = async ({params}, ctx) =>{
+  
   // const myCookie = ctx?.req?.cookies || "";
   //                 let admin = false;
                 
@@ -191,7 +192,6 @@ export const getServerSideProps = async ({params}, ctx) =>{
       props:{
         burger: product.data,
         list: menu.data,
-        
       }
       
     }
